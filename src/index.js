@@ -65,8 +65,10 @@ function signOutUser() {
 
 // Initiate firebase auth
 function initFirebaseAuth() {
-  // TODO 3: Subscribe to the user's signed-in status
+  // Listen to auth state changes.
+  onAuthStateChanged(getAuth(), authStateObserver);
 }
+  // TODO 3: Subscribe to the user's signed-in status
 
 // Returns the signed-in user's profile Pic URL.
 function getProfilePicUrl() {
